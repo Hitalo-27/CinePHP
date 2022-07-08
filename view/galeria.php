@@ -2,13 +2,14 @@
 
 <?php
 
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
-require "./repository/FilmesRepositoryPDO.php";
 require "./components/Mensagem.php";
 
-$filmesRepository = new FilmesRepositoryPDO();
-$filmes = $filmesRepository->listarTodos();
+$controller = new FilmesController();
+$filmes = $controller->index();
 
 ?>
 
@@ -17,8 +18,8 @@ $filmes = $filmesRepository->listarTodos();
     <nav class="nav-extended purple lighten-3">
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
-                <li class="active"><a href="galeria.php">Galeria</a></li>
-                <li><a href="cadastrar.php">Cadastrar</a></li>
+                <li class="active"><a href="/">Galeria</a></li>
+                <li><a href="/novo">Cadastrar</a></li>
             </ul>
         </div>
         <div class="nav-header center">

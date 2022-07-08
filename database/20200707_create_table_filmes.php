@@ -1,6 +1,6 @@
 <?php
 
-$db = new SQLite3("filmes.db");
+$db = new SQLite3("./database/filmes.db");
 
 $sql = "DROP TABLE IF EXISTS filmes";
 

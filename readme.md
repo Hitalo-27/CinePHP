@@ -7,4 +7,4 @@
   * php -S localhost:8000
 
 ### Rodar o banco de dados
-  *php database/db_up.php
+  * php database/db_up.php

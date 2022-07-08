@@ -5,8 +5,8 @@
     <nav class="nav-extended purple lighten-3">
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
-                <li><a href="galeria.php">Galeria</a></li>
-                <li class="active"><a href="cadastrar.php">Cadastrar</a></li>
+                <li><a href="/">Galeria</a></li>
+                <li class="active"><a href="/novo">Cadastrar</a></li>
             </ul>
         </div>
         <div class="nav-header center">
@@ -22,7 +22,7 @@
     </nav>
 
     <div class="row">
-        <form action="inserirFilme.php" method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <div class="col s6 offset-s3">
                 <div class="card">
                     <div class="card-content">
@@ -55,27 +55,27 @@
                         </div>
 
                         <!-- Input Capa do Filme -->
-                        <!-- <div class="file-field input-field">
+                        <div class="file-field input-field">
                             <div class="btn purple lighten-1">
                                 <span>Capa</span>
-                                <input type="file">
+                                <input type="file" name="poster_file">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text" name="poster">
                             </div>
-                        </div> -->
+                        </div>
 
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="input-field col s12">
                                 <input id="poster" type="text" class="validate" name="poster" required>
                                 <label for="poster">Capa</label>
                             </div>
-                        </div>
+                        </div> -->
 
 
                     </div>
                     <div class="card-action">
-                        <a class="waves-effect waves-light btn grey" href="galeria.php">Cancelar</a>
+                        <a class="waves-effect waves-light btn grey" href="/">Cancelar</a>
                         <button type="submit" class="waves-effect waves-light btn purple">Cadastrar</button>
                     </div>
                 </div>
