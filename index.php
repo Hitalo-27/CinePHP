@@ -5,18 +5,38 @@ $method = $_SERVER["REQUEST_METHOD"];
 
 require "./controller/FilmesController.php";
 
-switch ($rota) {
-    case "/":
-        require "view/galeria.php";
-        break;
-    case "/novo":
-        if ($method == "GET") require "view/cadastrar.php";
-        if ($method == "POST") {
-            $controller = new FilmesController();
-            $controller->save($_REQUEST);
-        };
-        break;
-    default:
-        require "view/404.php";
-        break;
+if ($rota === "/") {
+    require "view/galeria.php";
+    exit();
 }
+
+if ($rota === "/novo") {
+    if ($method == "GET") require "view/cadastrar.php";
+    if ($method == "POST") {
+        $controller = new FilmesController();
+        $controller->save($_REQUEST);
+    };
+    exit();
+}
+
+if ($rota === "/favoritos") {
+    require "view/favoritos.php";
+    exit();
+}
+
+if (substr($rota, 0, strlen("/favoritar")) === "/favoritar") {
+    $controller = new FilmesController();
+    $controller->favorite(basename($rota));
+    exit();
+}
+
+if (substr($rota, 0, strlen("/filmes")) === "/filmes") {
+    if ($method == "GET") require "view/galeria.php";
+    if ($method == "DELETE") {
+        $controller = new FilmesController();
+        $controller->delete(basename($rota));
+    }
+    exit();
+}
+
+require "view/404.php";

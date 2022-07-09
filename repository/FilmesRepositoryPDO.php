@@ -36,4 +36,26 @@ class FilmesRepositoryPDO
 
         return $stmt->execute();
     }
+
+    public function favoritar(int $id){
+        $sql = "UPDATE filmes SET favorito=NOT favorito WHERE id=:id";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        if($stmt->execute()){
+            return "ok";
+        }else{
+            return "erro";
+        }
+    }
+
+    public function delete(int $id){
+        $sql = "DELETE FROM filmes WHERE id=:id";
+        $stmt = $this->conexao->prepare($sql);
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        if($stmt->execute()){
+            return "ok";
+        }else{
+            return "erro";
+        }
+    }
 }

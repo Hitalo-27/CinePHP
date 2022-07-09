@@ -3,8 +3,7 @@ body{
 }
 
 .nav-extended{
-    background-image: url("../image/teste3.jpg");
-    background-size: cover;
+    background-image: url("../image/imageHeader.webp");
     background-blend-mode: soft-light;
 }
 
@@ -17,7 +16,7 @@ nav ul li.active, .tab a.active {
     text-shadow: 2px 2px 12px #000000;
 }
 
-.card{
-    background-color: #1e1e1e;
-    color: #FFFFFF;
+.fadeOut{
+    opacity: 0;
+    transition: 1s;
 }

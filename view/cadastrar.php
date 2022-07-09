@@ -2,7 +2,7 @@
 
 <body>
 
-    <nav class="nav-extended purple lighten-3">
+    <nav class="nav-extended teal lighten-1">
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
                 <li><a href="/">Galeria</a></li>
@@ -13,9 +13,8 @@
             <h1>CinePHP</h1>
         </div>
         <div class="nav-content">
-            <ul class="tabs tabs-transparent purple darken-1">
+            <ul class="tabs tabs-transparent teal darken-4">
                 <li class="tab"><a class="active" href="#test1">Todos</a></li>
-                <li class="tab"><a href="#test2">Assistidos</a></li>
                 <li class="tab"><a href="#test3">Favoritos</a></li>
             </ul>
         </div>
@@ -24,9 +23,9 @@
     <div class="row">
         <form method="POST" enctype="multipart/form-data">
             <div class="col s6 offset-s3">
-                <div class="card">
+                <div class="card grey darken-4">
                     <div class="card-content">
-                        <span class="card-title">Cadastrar Filme</span>
+                        <span class="card-title white-text">Cadastrar Filme</span>
 
                         <!-- Input Titulo -->
                         <div class="row">
@@ -56,27 +55,18 @@
 
                         <!-- Input Capa do Filme -->
                         <div class="file-field input-field">
-                            <div class="btn purple lighten-1">
+                            <div class="btn teal darken-3">
                                 <span>Capa</span>
-                                <input type="file" name="poster_file">
+                                <input type="file" name="poster_file" accept="image/*">
                             </div>
                             <div class="file-path-wrapper">
                                 <input class="file-path validate" type="text" name="poster">
                             </div>
                         </div>
-
-                        <!-- <div class="row">
-                            <div class="input-field col s12">
-                                <input id="poster" type="text" class="validate" name="poster" required>
-                                <label for="poster">Capa</label>
-                            </div>
-                        </div> -->
-
-
                     </div>
                     <div class="card-action">
-                        <a class="waves-effect waves-light btn grey" href="/">Cancelar</a>
-                        <button type="submit" class="waves-effect waves-light btn purple">Cadastrar</button>
+                        <a class="waves-effect waves-light btn grey darken-2" href="/">Cancelar</a>
+                        <button type="submit" class="waves-effect waves-light btn teal darken-4">Cadastrar</button>
                     </div>
                 </div>
             </div>

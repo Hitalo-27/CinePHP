@@ -7,4 +7,5 @@
   * php -S localhost:8000
 
 ### Rodar o banco de dados
-  * php database/db_up.php
+  * php database/20200707_create_table_filmes.php
+  * php database/20220708_update_table_filmes.php
